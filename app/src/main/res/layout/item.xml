@@ -6,7 +6,7 @@
     android:layout_height="170dp">
 
     <TextView
-        android:id="@+id/helloText"
+        android:id="@+id/itemName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E339"
