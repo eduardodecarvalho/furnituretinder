@@ -1,22 +1,21 @@
 package com.furniturecombiner.model;
 
-import java.math.BigDecimal;
-
 public class Item {
 
     private Long id;
     private String name;
-    private String category;
-    private BigDecimal price;
+    private String description;
+    private String price;
     private String picture;
+    private int imageResource;
 
     public Item() {
     }
 
-    public Item(Long id, String name, String category, BigDecimal price, String picture) {
+    public Item(Long id, String name, String description, String price, String picture) {
         this.id = id;
         this.name = name;
-        this.category = category;
+        this.description = description;
         this.price = price;
         this.picture = picture;
     }
@@ -37,19 +36,19 @@ public class Item {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public BigDecimal getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -59,5 +58,13 @@ public class Item {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    public int getImageResource() {
+        return imageResource;
+    }
+
+    public void setImageResource(int imageResource) {
+        this.imageResource = imageResource;
     }
 }

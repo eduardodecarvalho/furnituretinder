@@ -6,16 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/itemName"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#E339"
-        android:gravity="center"
-        android:textColor="@android:color/white"
-        android:textSize="98sp"
-        tools:text="Hello" />
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -29,10 +19,11 @@
 
             <!-- Media -->
             <ImageView
-                android:id="@+id/itemImage"
+                android:id="@+id/picture"
+                android:layout_marginTop="100dp"
                 android:layout_width="match_parent"
-                android:layout_height="194dp"
-                app:srcCompat="@drawable/chair_1"
+                android:layout_height="375dp"
+                app:srcCompat="@drawable/chair_4"
                 android:scaleType="centerCrop"
                 />
 
@@ -44,13 +35,24 @@
 
                 <!-- Title, secondary and supporting text -->
                 <TextView
-                    android:id="@+id/itemNameTitle"
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|bottom"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    tools:text="Hello" />
+                <TextView
+                    android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hello"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:layout_marginTop="8dp"
+                    android:text="Teste"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
                     />
                 <TextView
+                    android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -71,11 +73,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Unlike"
+                    android:onClick="unlikeItem"
                     style="?attr/borderlessButtonStyle"/>
+
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="LIke"
+                    android:onClick="likeItem"
                     style="?attr/borderlessButtonStyle"/>
             </LinearLayout>
 
